@@ -1,10 +1,11 @@
 import React from 'react';
 import { Layout } from '../components/common';
+import { Hero } from '../components/Hero';
 
 function Index() {
   return (
     <Layout>
-      <h1 className='text-3xl font-bold underline'>Index</h1>
+      <Hero />
     </Layout>
   );
 }
