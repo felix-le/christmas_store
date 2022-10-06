@@ -72,7 +72,7 @@ const Hero = ({ imgSrc = DefaultBgImg, title = '', subTitle = '' }) => {
           <HeroBannerWrapper>
             <HeroBannerBgWrapper
               style={{
-                backgroundImage: `url(${imgSrc.src}) ? url(${imgSrc.src}) :'bg-indigo-300'`,
+                backgroundImage: `url(${imgSrc.src})`,
               }}
             >
               <Overlay />
