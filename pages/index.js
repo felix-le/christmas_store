@@ -1,10 +1,17 @@
+import { Navigation } from 'components/Navigation';
 import React from 'react';
 import { Layout } from '../components/common';
-
+import { Hero } from '../components/Hero';
+import HomeHero from '../assets/images/bg/home_hero.jpg';
 function Index() {
   return (
     <Layout>
-      <h1 className='text-3xl font-bold underline'>Index</h1>
+      <Navigation />
+      <Hero
+        imgSrc={HomeHero}
+        title='HANDMADE SOAPS'
+        subTitle='COMPLETE NATURAL CLEAN'
+      />
     </Layout>
   );
 }
