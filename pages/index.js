@@ -7,7 +7,11 @@ function Index() {
   return (
     <Layout>
       <Navigation />
-      <Hero ImgSrc={HomeHero} />
+      <Hero
+        imgSrc={HomeHero}
+        title='HANDMADE SOAPS'
+        subTitle='COMPLETE NATURAL CLEAN'
+      />
     </Layout>
   );
 }
