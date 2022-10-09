@@ -15,12 +15,16 @@ import DefaultBgImg from '../../assets/images/bg/bg-image-2.jpeg';
 // `;
 
 const HeroBanner_C = tw.div`
+lg:min-h-[700px]
+sm:min-h-[500px]
+relative
+
 `;
 
 const HeroBannerWrapper = tw.div`
-  relative
-  min-h-full
   flex
+min-h-full
+
 `;
 
 const HeroBannerTextWrapper = tw.div`
@@ -42,8 +46,6 @@ const HeroBannerSubtitle = tw.h2`
 const HeroBannerBgWrapper = tw.div`
   absolute
   h-full
-  lg:min-h-[700px]
-  sm:min-h-[500px]
   inset-0
   bg-cover
   bg-no-repeat
@@ -67,23 +69,21 @@ const Overlay = tw.div`
 const Hero = ({ imgSrc = DefaultBgImg, title = '', subTitle = '' }) => {
   return (
     <>
-      <section>
-        <HeroBanner_C>
-          <HeroBannerWrapper>
-            <HeroBannerBgWrapper
-              style={{
-                backgroundImage: `url(${imgSrc.src})`,
-              }}
-            >
-              <Overlay />
-              <HeroBannerTextWrapper>
-                <HeroBannerTitle>{title}</HeroBannerTitle>
-                <HeroBannerSubtitle>{subTitle}</HeroBannerSubtitle>
-              </HeroBannerTextWrapper>
-            </HeroBannerBgWrapper>
-          </HeroBannerWrapper>
-        </HeroBanner_C>
-      </section>
+      <HeroBanner_C>
+        <HeroBannerWrapper>
+          <HeroBannerBgWrapper
+            style={{
+              backgroundImage: `url(${imgSrc.src})`,
+            }}
+          >
+            <Overlay />
+            <HeroBannerTextWrapper>
+              <HeroBannerTitle>{title}</HeroBannerTitle>
+              <HeroBannerSubtitle>{subTitle}</HeroBannerSubtitle>
+            </HeroBannerTextWrapper>
+          </HeroBannerBgWrapper>
+        </HeroBannerWrapper>
+      </HeroBanner_C>
     </>
   );
 };
