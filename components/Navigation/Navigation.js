@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <div>
       <Popover as='header' className='relative'>
-        <div className='bg-gray-900 '>
+        <div className='bg-gray-900 py-2'>
           <div className='container'>
             <nav
               className='relative mx-auto flex items-center justify-between'
