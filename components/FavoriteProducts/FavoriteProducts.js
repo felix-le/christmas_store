@@ -1,18 +1,5 @@
-import Section from '../../elements/Section';
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import Section from '../../Elements/Section';
+import SectionTitle from 'Elements/Section/SectionTitle';
 const products = [
   {
     id: 1,
@@ -49,15 +36,15 @@ const products = [
   // More products...
 ];
 
-export default function Example() {
+export default function FavoriteProducts() {
   return (
-    <Section className='bg-white'>
+    <Section>
       <div className='container text-center'>
-        <h2 id='products-heading' className=''>
-          Categories
-        </h2>
-
-        <h4>Show up some categories links</h4>
+        <SectionTitle
+          title='How it works'
+          sectionSubTitle='Everything you need to get amazing products'
+          sectionSummary='Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatum obcaecati minima fuga '
+        />
 
         <div className='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
           {products.map((product) => (

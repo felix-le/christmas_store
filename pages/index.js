@@ -9,9 +9,9 @@ import Hero3 from '../assets/images/bg/hero-3.jpg';
 
 import Slide from '../components/slide';
 import ShopSteps from 'components/ShopSteps';
-import Categories from 'components/categories';
-import SuggestionProducts from 'components/suggestionProducts';
-const slideData = [
+import FavoriteProducts from 'components/FavoriteProducts';
+import ProductSlide from 'components/ProductSlide';
+const heroSlides = [
   {
     id: 1,
     imgSrc: Hero1,
@@ -41,7 +41,7 @@ function Index() {
       <Navigation />
       {/* Slider */}
       <Slide>
-        {slideData.map((slide) => (
+        {heroSlides.map((slide) => (
           <Hero
             key={slide.id}
             imgSrc={slide.imgSrc}
@@ -50,10 +50,9 @@ function Index() {
           />
         ))}
       </Slide>
-
       <ShopSteps />
-      <Categories />
-      <SuggestionProducts />
+      <FavoriteProducts />
+      <ProductSlide />
     </Layout>
   );
 }

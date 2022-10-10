@@ -1,7 +1,10 @@
 import React from 'react';
-
-function Section({ children }) {
-  return <section className='py-16 sm:py-20'>{children}</section>;
+function Section({ children, bgColor = 'bg-white' }) {
+  return (
+    <section className={`${bgColor} py-16 sm:py-20 relative`}>
+      {children}
+    </section>
+  );
 }
 
 export default Section;
