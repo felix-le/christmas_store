@@ -1,15 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@components/*": ["/components/*"],
-      "@pages/*": ["/pages/*"]
+      "@/*": ["src/*"],
+      "@root/*": ["./*"]
     }
-  },
-  "include": [
-    "pages/**/*",
-    "components/**/*",
-    "Elements/section/SectionTitle.js"
-  ],
-  "exclude": ["node_modules"]
+  }
 }

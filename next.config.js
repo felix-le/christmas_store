@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: ['tailwindui.com'],
+  experimental: {
+    newNextLinkBehavior: true,
+    scrollRestoration: true,
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
